@@ -20,12 +20,15 @@ padding-left:50px;
     padding-left:30px;
 }
 `
-
+export const ButtonContainer = styled.div `
+width:100%;
+text-align:center;
+`;
 export const Button = styled.button `
 border-radius:4px;
 background:${({primary})=>primary?'#4b59f7':'#0467fb'};
 white-space:nowrap;
-padding:${({big})=>(big?'12px 64px':'10px 20px')};
+padding:${({big})=>(big?'20px 64px':'15px 20px')};
 color:#fff;
 font-size:${({fontBig})=>(fontBig?'20px':'16px')};
 outline:none;

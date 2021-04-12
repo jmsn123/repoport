@@ -7,8 +7,8 @@ import{  InfoSec,
     TopLine,
     Heading,
     Subtitle,
-    ImgWrapper,
-    Img} from './infoSection.styles'
+    } from './singleSection.styles'
+    import Mason from './masonSection'
 import {Link}from "react-router-dom";
 const SingleSection = ({
     primary,
@@ -44,7 +44,7 @@ const SingleSection = ({
                 </Link>
               </TextWrapper>
             </InfoColumn>
-            
+            <Mason/>
           </InfoRow>
                 </Container>
             </InfoSec>

@@ -15,10 +15,10 @@
   };
   export const homeObjTwo = {
       primary: true,
-      lightBg: false,
-      lightTopLine: true,
-      lightText: true,
-      lightTextDesc: true,
+      lightBg: true,
+      lightTopLine: false,
+      lightText: false,
+      lightTextDesc: false,
       topLine: 'Marketing Agency',
       headline: 'Lead Generation Specialist for Online Businesses',
       description: 'We help business owners increase their revenue. Our team of unique specialist can help you achieve your business goals.',

@@ -1,10 +1,11 @@
 import React from 'react'
-import{InfoSection}from "../../components"
-import{homeObjOne} from './data'
+import{InfoSection,SingleSection}from "../../components"
+import{homeObjOne,homeObjTwo} from './data'
 const Contact = () => {
     return (
         <>
                 <InfoSection {...homeObjOne}/>
+                <SingleSection {...homeObjTwo}/>
         </>
     )
 }

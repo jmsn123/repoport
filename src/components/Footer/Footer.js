@@ -15,11 +15,7 @@ import {
     Form,
     FormInput,
     FooterSubscription,
-    FooterLinkItems,
-    FooterLinksContainer,
-    FooterLinksWrapper,
-    FooterLink,
-    FooterLinkTitle,
+   
     SocialIcon,
     SocialLogo,
     SocialMedia,
