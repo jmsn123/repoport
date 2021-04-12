@@ -52,4 +52,4 @@ const SingleSection = ({
     )
 }
 
-export default InfoSection
+export default SingleSection;
