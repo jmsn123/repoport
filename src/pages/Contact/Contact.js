@@ -1,13 +1,10 @@
 import React from 'react'
 import{InfoSection}from "../../components"
 import{homeObjOne} from './data'
-const Home = () => {
+const Contact = () => {
     return (
         <>
                 <InfoSection {...homeObjOne}/>
-              
-
-
         </>
     )
 }
