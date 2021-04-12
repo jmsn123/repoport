@@ -4,7 +4,6 @@ export const MasonSection = styled.div `
         
         display:grid;
         grid-template-columns:repeat(3,1fr);
-        background:orange;
         text-align:center;
         color:"red";
         grid-gap:3rem;
@@ -18,7 +17,13 @@ export const MasonSection = styled.div `
         
 
 `
+export const PortfolioHeading = styled.h2 `
+text-align:center;
+font-size:2rem;
+color:black;
+margin-bottom:-140px;
 
+`
 export const MasonItems = styled.div `
 
 display:flex;
@@ -27,7 +32,7 @@ align-items:center;
 height:100%;
 width:100%;
 padding:5rem;
-background:blue;
 text-align:center;
+color:black
 
 `

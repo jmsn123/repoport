@@ -1,14 +1,14 @@
 import React from 'react'
-import { Container, Button,ButtonContainer } from "../../Global"
-import {MasonSection,MasonItems} from './mason.styles'
+import { Container,} from "../../Global"
+import {MasonSection,MasonItems,PortfolioHeading} from './mason.styles'
 
 const Mason = () => {
 
     return(
         <>
 <Container>
-<ButtonContainer><Button>Hello world</Button></ButtonContainer>
-    
+
+    <PortfolioHeading>Hello world</PortfolioHeading>
     <MasonSection>
     <MasonItems>
             Items
