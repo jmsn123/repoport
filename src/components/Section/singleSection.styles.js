@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const InfoSec = styled.div `
   color: #fff;
-  padding: 160px 0;
+  padding: 360px 0;
   display: flex;
   justify-content:center;
   height:100vh;

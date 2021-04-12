@@ -9,6 +9,11 @@ export const MasonSection = styled.div `
         color:"red";
         grid-gap:3rem;
         text-align:center;
+        padding:2px 0;
+        margin-top:100px;
+        margin-bottom:100px;
+      
+
         
         
 
@@ -19,8 +24,9 @@ export const MasonItems = styled.div `
 display:flex;
 justify-content:center;
 align-items:center;
-height:100px;
+height:100%;
 width:100%;
+padding:5rem;
 background:blue;
 text-align:center;
 

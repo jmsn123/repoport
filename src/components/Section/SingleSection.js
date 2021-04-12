@@ -44,7 +44,9 @@ const SingleSection = ({
                 </Link>
               </TextWrapper>
             </InfoColumn>
-            <Mason/>
+            <InfoColumn>
+          <Mason/>
+            </InfoColumn>
           </InfoRow>
                 </Container>
             </InfoSec>

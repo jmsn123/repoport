@@ -19,6 +19,15 @@ const Mason = () => {
         <MasonItems>
             Items
         </MasonItems>
+        <MasonItems>
+            Items
+        </MasonItems> 
+        <MasonItems>
+            Items
+        </MasonItems> 
+        <MasonItems>
+            Items
+        </MasonItems>
     </MasonSection>
 </Container>
 </>
