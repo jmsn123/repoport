@@ -2,6 +2,7 @@ import React from "react";
 import Data from "../../data/data";
 import Img1 from "../../assets/imgs/photo1.jpg";
 import styled from "styled-components";
+import simpleIcons from "simple-icons";
 function Photos() {
   //   console.log(Data[0].img);
   return (
@@ -18,6 +19,8 @@ function Photos() {
                 <h1>John Doe</h1>
                 <p>Architect & Engineer</p>
                 <p>We love that guy</p>
+
+                {simpleIcons["3M"].svg}
               </FlipCardBack>
             </FlipCardInner>
           </FlipCard>
@@ -33,20 +36,30 @@ const Title = styled.h1`
   margin-bottom: 10px;
 `;
 const Container = styled.div`
-  height: 50vh;
-  width: calc(100vw + 10px);
-  margin: 100px 0 200px 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 200px 0;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  justify-content: center;
+  align-items: center;
 `;
 
 const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 20px;
+  }
 `;
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  margin-right: 10px; ;
+  /* margin-right: 10px; */
 `;
 const FlipCardInner = styled.div`
   position: relative;
@@ -64,7 +77,12 @@ const FlipCard = styled.div`
   perspective: 1000px;
   border: none;
   outline: none;
-  margin-right: 10px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 100px;
+  }
+  @media screen and (max-width: 425px) {
+    width: 100%;
+  }
 
   :hover ${FlipCardInner} {
     transform: rotateY(180deg);
