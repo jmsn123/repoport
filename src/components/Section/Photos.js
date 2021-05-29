@@ -7,24 +7,22 @@ function Photos() {
   return (
     <Container>
       <Title>Hello World</Title>
-      <>
-        <CardContainer>
-          {Data.map((item) => (
-            <FlipCard>
-              <FlipCardInner>
-                <FlipCardFront>
-                  <Image key={item.img} src={Img1} />
-                </FlipCardFront>
-                <FlipCardBack>
-                  <h1>John Doe</h1>
-                  <p>Architect & Engineer</p>
-                  <p>We love that guy</p>
-                </FlipCardBack>
-              </FlipCardInner>
-            </FlipCard>
-          ))}
-        </CardContainer>
-      </>
+      <CardContainer>
+        {Data.map((item) => (
+          <FlipCard>
+            <FlipCardInner>
+              <FlipCardFront>
+                <Image key={item.img} src={Img1} />
+              </FlipCardFront>
+              <FlipCardBack>
+                <h1>John Doe</h1>
+                <p>Architect & Engineer</p>
+                <p>We love that guy</p>
+              </FlipCardBack>
+            </FlipCardInner>
+          </FlipCard>
+        ))}
+      </CardContainer>
     </Container>
   );
 }
