@@ -35,7 +35,7 @@ const Title = styled.h1`
 const Container = styled.div`
   height: 50vh;
   width: calc(100vw + 10px);
-  margin: 100px 0;
+  margin: 100px 0 200px 0;
 `;
 
 const CardContainer = styled.div`
