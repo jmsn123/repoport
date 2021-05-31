@@ -26,8 +26,8 @@
     },
     "scripts": {
         "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
-        "start": "craco start",
-        "build": "craco build",
+        "start": "CLIENT_ENV=development craco start",
+        "build": "CLIENT_ENV=production craco build",
         "test": "craco test",
         "eject": "react-scripts eject"
     },
