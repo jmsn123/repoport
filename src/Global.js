@@ -2,6 +2,8 @@ import styled, { createGlobalStyle } from "styled-components";
 
 const Global = createGlobalStyle`
 *{
+
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
 font-family: 'Barlow', sans-serif; 
 box-sizing:border-box;

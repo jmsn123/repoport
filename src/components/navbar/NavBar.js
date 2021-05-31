@@ -53,21 +53,21 @@ const NavBar = ({ bg }) => {
             </NavItem>
 
             <NavItem>
-              <NavLink to="/Services">Services</NavLink>
+              <NavLink to="/Services">Portfolio</NavLink>
             </NavItem>
 
             <NavItem>
-              <NavLink to="/Contact">Contact</NavLink>
+              <NavLink to="/Contact">Contact Me </NavLink>
             </NavItem>
             <NavItemBtn>
               {button ? (
-                <NavBtnLink to="/sign-up">
-                  <Button primary>Sign up</Button>
+                <NavBtnLink to="/Blog">
+                  <Button primary>Blog</Button>
                 </NavBtnLink>
               ) : (
-                <NavBtnLink to="/sign-up">
+                <NavBtnLink to="/Blog">
                   <Button onClick={closeMenu} fontBig primary>
-                    Sign up
+                    Blog
                   </Button>
                 </NavBtnLink>
               )}

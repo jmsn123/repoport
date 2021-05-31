@@ -7,10 +7,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 
-### `npm start`
+### `npm i && npm start`
 This Project was built For my portfolio project.
 
 ## Learn More
 
-This project was built with node js react js styled components  
+This project was built with node js react js styled components  fire base
 

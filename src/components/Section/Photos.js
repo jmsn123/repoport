@@ -2,113 +2,84 @@ import React from "react";
 import Data from "../../data/data";
 import Img1 from "../../assets/imgs/photo1.jpg";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import simpleIcons from "simple-icons";
 function Photos() {
-  //   console.log(Data[0].img);
+  //   console.log(Data[0].img);'
   return (
     <Container>
-      <Title>Hello World</Title>
-      <CardContainer>
-        {Data.map((item) => (
-          <FlipCard>
-            <FlipCardInner>
-              <FlipCardFront>
-                <Image key={item.img} src={Img1} />
-              </FlipCardFront>
-              <FlipCardBack>
-                <h1>John Doe</h1>
-                <p>Architect & Engineer</p>
-                <p>We love that guy</p>
-
-                {simpleIcons["3M"].svg}
-              </FlipCardBack>
-            </FlipCardInner>
-          </FlipCard>
-        ))}
-      </CardContainer>
+      <Card>
+        <Face>
+          <CardImg />
+          <Title>design</Title>{" "}
+          <Content>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              odit eveniet earum temporibus accusamus in minima quam eos
+              facilis. Quibusdam
+            </p>
+            <Links></Links>
+          </Content>
+        </Face>
+      </Card>
+      <Card>
+        <Face>
+          <CardImg />
+          <Title>design</Title>{" "}
+          <Content>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              odit eveniet earum temporibus accusamus in minima quam eos
+              facilis. Quibusdam
+            </p>
+            <Links></Links>
+          </Content>
+        </Face>
+      </Card>
+      <Card>
+        <Face>
+          <CardImg />
+          <Title>design</Title>{" "}
+          <Content>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              odit eveniet earum temporibus accusamus in minima quam eos
+              facilis. Quibusdam
+            </p>
+            <Links></Links>
+          </Content>
+        </Face>
+      </Card>
     </Container>
   );
 }
 
 export default Photos;
-const Title = styled.h1`
-  text-align: center;
-  margin-bottom: 10px;
-`;
+
 const Container = styled.div`
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 200px 0;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-  justify-content: center;
-  align-items: center;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10rem auto;
 `;
-
-const CardContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    padding: 0 20px;
+const Links = styled(Link)``;
+const Card = styled.div`
+  width: min-content;
+  margin: 10px auto;
+`;
+const Face = styled.div``;
+const Content = styled.div`
+  p {
+    text-align: center;
   }
 `;
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  /* margin-right: 10px; */
+const CardImg = styled.img`
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: red;
+  margin: 0 auto;
 `;
-const FlipCardInner = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-`;
-const FlipCard = styled.div`
-  background-color: transparent;
-  width: 500px;
-  height: 500px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-  border: none;
-  outline: none;
-  @media screen and (max-width: 768px) {
-    margin-bottom: 100px;
-  }
-  @media screen and (max-width: 425px) {
-    width: 100%;
-  }
-
-  :hover ${FlipCardInner} {
-    transform: rotateY(180deg);
-  }
-`;
-
-const FlipCardBack = styled.div`
-  background-color: orange;
-  color: white;
-  transform: rotateY(180deg);
-  position: absolute;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-`;
-const FlipCardFront = styled.div`
-  background-color: #bbb;
-  color: black;
-
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+const Title = styled.h1`
+  font-size: 3rem;
 `;
