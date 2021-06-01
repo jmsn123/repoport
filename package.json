@@ -29,11 +29,11 @@
         "web-vitals": "^1.0.1"
     },
     "scripts": {
-        "start": "yarn start:electron",
+        "start": "npm start:electron",
         "start:web": "env-cmd .env.web craco",
         "start:electron": "electron .",
         "start:electron-dev": "electron electron-dev.js",
-        "build": "yarn build:electron",
+        "build": "npm build:web",
         "build:web": "craco build",
         "build:electron": "env-cmd .env.electron craco",
         "watch:electron": "npm-watch",
