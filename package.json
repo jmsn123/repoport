@@ -29,11 +29,18 @@
         "web-vitals": "^1.0.1"
     },
     "scripts": {
-        "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
-        "start": "craco --max_old_space_size=2560 node_modules/.bin/react-scripts start",
-        "build": "craco --max_old_space_size=2560 node_modules/.bin/react-scripts build",
+        "start": "yarn start:electron",
+        "start:web": "env-cmd .env.web craco",
+        "start:electron": "electron .",
+        "start:electron-dev": "electron electron-dev.js",
+        "build": "yarn build:electron",
+        "build:web": "craco build",
+        "build:electron": "env-cmd .env.electron craco",
+        "watch:electron": "npm-watch",
         "test": "craco test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
     },
     "eslintConfig": {
         "extends": [
