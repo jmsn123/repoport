@@ -3,9 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "engines": {
-        "node": "12.x"
-        },
-        
+"node": "12.x"
+},
+
     "dependencies": {
         "@craco/craco": "^6.1.2",
         "@reduxjs/toolkit": "^1.5.1",
@@ -29,18 +29,11 @@
         "web-vitals": "^1.0.1"
     },
     "scripts": {
-        "start": "npm start:electron",
-        "start:web": "env-cmd .env.web craco",
-        "start:electron": "electron .",
-        "start:electron-dev": "electron electron-dev.js",
-        "build": "npm build:web",
-        "build:web": "craco build",
-        "build:electron": "env-cmd .env.electron craco",
-        "watch:electron": "npm-watch",
+        "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
+        "start": "node app.js",
+        "build": "craco --max_old_space_size=2560 node_modules/.bin/react-scripts build",
         "test": "craco test",
-        "eject": "react-scripts eject",
-        "pack": "electron-builder --dir",
-        "dist": "electron-builder"
+        "eject": "react-scripts eject"
     },
     "eslintConfig": {
         "extends": [
