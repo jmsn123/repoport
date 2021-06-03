@@ -30,7 +30,7 @@
     },
     "scripts": {
         "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
-        "start": "node App.js",
+        "start": "react-scripts start",
         "build": "craco --max_old_space_size=2560 node_modules/.bin/react-scripts build",
         "test": "craco test",
         "eject": "react-scripts eject"
