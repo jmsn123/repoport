@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Girl from "../../assets/imgs/girl.jpg";
 import Melo from "../../assets/imgs/melo.jpg";
 import Knight from "../../assets/imgs/smile.jpg";
+import useData from "../../customHooks/useData";
 
 const data = [
   {
@@ -13,102 +14,26 @@ const data = [
     data: "20 mars 2029 - 6 min read ",
   },
 ];
+
 function BlogPost() {
+  const [data] = useData();
   return (
     <Container>
-      <Card>
-        <a href="#" className="w-full block h-full">
-          <img
-            alt="blog photo"
-            src={Girl}
-            className="max-h-40 w-full object-cover"
-          />
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <p className="text-indigo-500 text-md font-medium">Article</p>
-            <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
-              Supercharged !
-            </p>
-            <p className="text-gray-400 dark:text-gray-300 font-light text-md">
-              Some Text Goes here
-            </p>
-            <div className="flex items-center mt-4">
-              <a href="#" className="block relative">
-                <img
-                  alt="profil"
-                  src={Melo}
-                  className="mx-auto object-cover rounded-full h-10 w-10 "
-                />
-              </a>
-              <div className="flex flex-col justify-between ml-4 text-sm">
-                <p className="text-gray-800 dark:text-white"> new Post Date</p>
-                <p className="text-gray-400 dark:text-gray-300">Update Post</p>
-              </div>
-            </div>
-          </div>
-        </a>
-      </Card>
-      <Card>
-        <a href="#" className="w-full block h-full">
-          <img
-            alt="blog photo"
-            src={Girl}
-            className="max-h-40 w-full object-cover"
-          />
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <p className="text-indigo-500 text-md font-medium">Article</p>
-            <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
-              Supercharged !
-            </p>
-            <p className="text-gray-400 dark:text-gray-300 font-light text-md">
-              Some Text Goes here
-            </p>
-            <div className="flex items-center mt-4">
-              <a href="#" className="block relative">
-                <img
-                  alt="profil"
-                  src={Girl}
-                  className="mx-auto object-cover rounded-full h-10 w-10 "
-                />
-              </a>
-              <div className="flex flex-col justify-between ml-4 text-sm">
-                <p className="text-gray-800 dark:text-white"> new Post Date</p>
-                <p className="text-gray-400 dark:text-gray-300">Update Post</p>
-              </div>
-            </div>
-          </div>
-        </a>
-      </Card>
-      <Card>
-        <a href="#" className="w-full block h-full">
-          <img
-            alt="blog photo"
-            src={Girl}
-            className="max-h-40 w-full object-cover"
-          />
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <p className="text-indigo-500 text-md font-medium">Article</p>
-            <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
-              Supercharged !
-            </p>
-            <p className="text-gray-400 dark:text-gray-300 font-light text-md">
-              Some Text Goes here
-            </p>
-            <div className="flex items-center mt-4">
-              <a href="#" className="block relative">
-                <img
-                  alt="profil"
-                  src={Knight}
-                  className="mx-auto object-cover rounded-full h-10 w-10 "
-                />
-              </a>
-              <div className="flex flex-col justify-between ml-4 text-sm">
-                <p className="text-gray-800 dark:text-white"> new Post Date</p>
-                <p className="text-gray-400 dark:text-gray-300">Update Post</p>
-              </div>
-            </div>
-          </div>
-        </a>
-      </Card>
+      {data.data.map((item) => (
+        <div key={item.id}>
+          <TitleContainer>
+            <Title></Title>
+          </TitleContainer>
+          <Card>
+            <CardContent>
+              <CardImg src={item.avatar} />
+              <h2>{`${item.first_name} ${item.last_name}`}</h2>
+              <CardTitle></CardTitle>
+              <p></p>
+            </CardContent>
+          </Card>
+        </div>
+      ))}
     </Container>
   );
 }
@@ -118,8 +43,38 @@ const Container = styled.div`
   max-width: 1400px;
   margin: 30px auto;
   display: flex;
+  flex-direction: column;
 `;
-const Card = styled.div.attrs({
-  className:
-    "overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto",
-})``;
+const Card = styled.div`
+  height: 20vh;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.5);
+`;
+
+const CardContent = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  h2 {
+    width: 100%;
+    justify-content: flex-start;
+  }
+`;
+const CardTitle = styled.h2``;
+const TitleContainer = styled.div`
+  margin-bottom: 10px;
+`;
+const Title = styled.h2`
+  text-align: center;
+  text-transform: capitalize;
+`;
+const CardImg = styled.img`
+  height: 100px;
+  width: 100px;
+  background: red;
+  z-index: 30;
+  margin: 0 20px;
+  /* align-self: center; */
+`;
