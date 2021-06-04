@@ -5,21 +5,11 @@ import Melo from "../../assets/imgs/melo.jpg";
 import Knight from "../../assets/imgs/smile.jpg";
 import useData from "../../customHooks/useData";
 
-const data = [
-  {
-    articleName: "article",
-    title: "Supercharged !",
-    body: "The new supercar is here, 543 cv and 140 000$. This is best racing GT about 7 years on",
-    author: "Jean Jacques",
-    data: "20 mars 2029 - 6 min read ",
-  },
-];
-
 function BlogPost() {
   const [data] = useData();
   return (
     <Container>
-      {data.data.map((item) => (
+      {data.map((item) => (
         <div key={item.id}>
           <TitleContainer>
             <Title></Title>
